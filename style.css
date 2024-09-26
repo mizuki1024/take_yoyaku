@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10; /* ヘッダーを前面に表示 */
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-left: auto; /* 右寄せ */
+}
+
+nav ul li {
+    margin-left: 20px; /* 画像との間にスペースを追加 */
+    text-align: center; /* テキストを中央揃え */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column; /* 画像の下にテキストを配置 */
+    align-items: center; /* 中央揃え */
+}
+
+nav ul li a img {
+    height: 30px; /* 画像の高さを調整 */
+    margin-bottom: 5px; /* テキストとの間にスペースを追加 */
+}
+
+.section1 {
+    height: 100vh; /* フルビューポートの高さ */
+    background-image: url('take_top.gif'); /* 背景にGIFを設定 */
+    background-size: contain; /* 背景画像をフィットさせる */
+    background-position: center; /* 中央に配置 */
+    background-repeat: no-repeat; /* 繰り返しなし */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* テキストカラーを白に */
+    text-align: center; /* テキストを中央揃え */
+}
+
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.section2 {
+    height: 100vh; /* フルビューポートの高さ */
+    background-image: url('背景2.png'); /* 背景に画像を設定 */
+    background-size: cover; /* 背景画像をカバー */
+    background-position: center; /* 中央に配置 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* テキストカラーを白に */
+    text-align: center; /* テキストを中央揃え */
+}
+
+.section2 h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section2 p {
+    font-size: 18px;
+}
+.title-section {
+    text-align: center;
+    margin-bottom: 40px; /* セクション間の余白 */
+  }
+  
+  .title-section h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .title-section p {
+    font-size: 18px;
+    color: white;
+  }
+  
+.camp-container {
+    display: flex;
+    flex-wrap: wrap; /* 2行目に折り返す */
+    justify-content: space-around; /* 均等にスペースを取る */
+    width: 90%; /* コンテナの幅を調整 */
+    align-items: center;
+  }
+  
+  .camp-section {
+    background-color: white;
+    border-radius: 50% / 50%;
+    display: flex;
+    align-items: center;
+    width: 30%; /* 各楕円の幅を調整 */
+    height: 350px; /* 楕円の高さを指定 */
+    margin-bottom: 20px; /* 各楕円の間にスペースを追加 */
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .camp-image {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .camp-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .camp-text {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .camp-text h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .camp-text p {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .button {
+    background-color: #00b3a9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #007f7b;
+  }
+  
+  .section-title {
+    margin-bottom: 40px;
+  }
+  
+  .section-title h1 {
+    font-size: 36px;
+    color: #3b3b3b;
+  }
+  
+  .section-title p {
+    font-size: 18px;
+    color: #3b3b3b;
+  }
+  
+  .content-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .content-item {
+    background-color: white;
+    border-radius: 50% / 40%;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .content-image {
+    background-color: #f0f0f0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #3b3b3b;
+  }
+  
+  .content-item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #3b3b3b;
+  }
+  
+  .content-item p {
+    font-size: 14px;
+    color: #3b3b3b;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    background-color: #3b7d3b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #2a5e2a;
+  }
+  

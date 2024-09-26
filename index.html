@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竹のキャンプ村</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        main {
+            padding-top: 80px; /* ヘッダーとの間にスペースを確保 */
+        }
+
+        nav {
+            position: fixed; /* 固定位置 */
+            top: 20px; /* 上からの距離 */
+            right: 20px; /* 右からの距離 */
+            z-index: 100; /* 他の要素より前面に表示 */
+            background-color: transparent; /* 背景色を透明に */
+            box-shadow: none; /* 影をなくす */
+        }
+
+        nav ul {
+            display: flex; /* 横並びにする */
+            list-style: none; /* リストマーカーを消す */
+        }
+
+        nav ul li {
+            margin-left: 20px; /* 各リンクの間隔 */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* 下線を消す */
+            color: #333; /* テキストの色 */
+            display: flex; /* アイコンとテキストを横に並べる */
+            align-items: center; /* 縦方向に中央揃え */
+        }
+
+        nav ul li a img {
+            height: 30px; /* アイコンの高さ */
+            margin-right: 5px; /* アイコンとテキストの間隔 */
+        }
+
+        .section1 {
+            height: 100vh; /* ビューポートの高さに設定 */
+            
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .background-image {
+    position: absolute; /* 絶対位置を設定 */
+    top: 0; /* 上からの位置を0に設定 */
+    left: 0; /* 左からの位置を0に設定 */
+    right: 0;
+    bottom: 0;
+    background-size: cover; /* 画像を拡大して画面全体をカバー */
+    background-position: top center; /* 上部中央に配置 */
+    opacity: 0; /* 初期の透明度を設定 */
+    animation: fade 12s infinite; /* アニメーションを設定 */
+}
+
+
+        .background-image:nth-child(1) {
+            animation-delay: 0s; /* 1枚目の画像の表示時間 */
+        }
+
+        .background-image:nth-child(2) {
+            animation-delay: 4s; /* 2枚目の画像の表示時間 */
+        }
+
+        .background-image:nth-child(3) {
+            animation-delay: 8s; /* 3枚目の画像の表示時間 */
+        }
+
+        @keyframes fade {
+            0%, 20% {
+                opacity: 1; /* 最初の20%の間は表示 */
+            }
+            33%, 100% {
+                opacity: 0; /* 次の33%からは非表示 */
+            }
+        }
+
+        .section2 {
+            height: auto; /* 高さを自動にする */
+            padding: 60px 20px; /* セクション内の余白 */
+            color: white; /* テキストの色を白に */
+            text-align: center; /* テキストを中央揃え */
+        }
+
+        .section2 h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .section2 p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .section2 img {
+            max-width: 100%; /* 画像の幅が画面を超えないようにする */
+            height: auto; /* 画像の高さは自動調整 */
+            display: block;
+            margin: 0 auto; /* 画像を中央揃え */
+        }
+
+        .section3 {
+            background-color: #00b3a9;
+            padding: 60px 0; /* セクション全体の余白 */
+            text-align: center;
+        }
+
+        .title-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title-section h1 {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .title-section p {
+            font-size: 18px;
+            color: white;
+        }
+
+        .camp-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 90%;
+            margin: 0 auto; /* コンテナを中央揃え */
+        }
+
+        .camp-section {
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28%;
+            height: 350px;
+            margin-bottom: 40px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .camp-image {
+            width: 50%;
+            height: 100%;
+        }
+
+        .camp-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .camp-text {
+            width: 50%;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .camp-text h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .camp-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .button {
+            background-color: #007f7b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #005f5a;
+        }
+
+        .section4 {
+            background-color: #d0f0c0; /* 薄い緑の背景色 */
+            padding: 60px 20px; /* 余白を追加 */
+            text-align: center; /* テキストを中央揃え */
+        }
+
+        .section-title {
+            font-size: 36px; /* タイトルのフォントサイズ */
+            color: #3b3b3b; /* タイトルの色 */
+            margin-bottom: 20px; /* タイトルと画像の間隔 */
+        }
+
+        .image-container {
+            display: flex; /* フレックスボックスを使用して横並び */
+            justify-content: center; /* 中央揃え */
+            flex-wrap: wrap; /* 画面サイズに応じて折り返し */
+        }
+
+        .image-item {
+            margin: 20px; /* 画像の間隔 */
+            text-align: center; /* キャプションを中央揃え */
+        }
+
+        .image-item img {
+            max-width: 300px; /* 画像の幅を調整 */
+            height: auto; /* 高さは自動調整 */
+            border-radius: 15px; /* 角を丸くする */
+        }
+
+        .image-text {
+            background-color: #d0f0c0; /* 背景色を薄い緑に */
+            padding: 20px; /* 内側の余白 */
+            border-radius: 10px; /* 角を丸くする */
+            margin-top: 10px; /* 画像との間隔 */
+            text-align: center; /* テキストを中央揃え */
+        }
+
+        .image-text h3 {
+            font-size: 24px; /* タイトルのフォントサイズ */
+            color: #3b3b3b; /* タイトルの色 */
+            margin-bottom: 10px; /* タイトルと本文の間隔 */
+        }
+
+        .image-text p {
+            font-size: 16px; /* 本文のフォントサイズ */
+            color: #333; /* 本文の色 */
+            margin-bottom: 10px; /* 本文とボタンの間隔 */
+        }
+
+        .button {
+            background-color: #007f7b; /* ボタンの背景色 */
+            color: white; /* ボタンの文字色 */
+            padding: 10px 20px; /* ボタンの余白 */
+            border-radius: 25px; /* ボタンの角を丸くする */
+            text-decoration: none; /* 下線を消す */
+            transition: background-color 0.3s ease; /* ホバー時の変化 */
+        }
+
+        .button:hover {
+            background-color: #005f5a; /* ホバー時の背景色 */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="村のこと.png" alt="村のことの画像"><span>村のこと</span></a></li>
+                    <li><a href="#"><img src="あそびの画像.png" alt="あそびの画像"><span>あそび</span></a></li>
+                    <li><a href="#"><img src="竹のこと.png" alt="竹のたにの画像"><span>竹のこと</span></a></li>
+                    <li><a href="yoyaku\yoyaku.html"><img src="よやくする.png" alt="よやくするの画像"><span>よやくする</span></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section id="section1" class="section1">
+            <div class="background-image" style="background-image: url('たけの子WEB.png');"></div>
+            <div class="background-image" style="background-image: url('たけの子WEB2.png');"></div>
+            <div class="background-image" style="background-image: url('たけの子WEB3.png');"></div>
+            <h1>ようこそ！竹のキャンプ村へ</h1>
+            <p>自然の中で楽しいキャンプ体験をお楽しみください。</p>
+        </section>
+
+        <section class="section2">
+            <h2>セクション2のタイトル</h2>
+            <p>このセクションでは、さまざまなアクティビティやイベントについて説明します。</p>
+            <img src="背景2.png" alt="セクション2の画像">
+        </section>
+
+        <section class="section3">
+            <div class="title-section">
+                <h1>あそび</h1>
+                <p>説明の文章を<br>ちょちょっとお願いします</p>
+            </div>
+
+            <div class="camp-container">
+                <div class="camp-section">
+                    <div class="camp-image">
+                        <img src="photo.webp" alt="キャンプの写真">
+                    </div>
+                    <div class="camp-text">
+                        <h2>キャンプ1</h2>
+                        <p>この場所の<br>キャンプの軽い特色とか</p>
+                        <a href="#" class="button">くわしく →</a>
+                    </div>
+                </div>
+
+                <div class="camp-section">
+                    <div class="camp-image">
+                        <img src="your-image-path2.jpg" alt="キャンプの写真">
+                    </div>
+                    <div class="camp-text">
+                        <h2>キャンプ2</h2>
+                        <p>この場所の<br>キャンプの軽い特色とか</p>
+                        <a href="#" class="button">くわしく →</a>
+                    </div>
+                </div>
+
+                <div class="camp-section">
+                    <div class="camp-image">
+                        <img src="your-image-path3.jpg" alt="キャンプの写真">
+                    </div>
+                    <div class="camp-text">
+                        <h2>キャンプ3</h2>
+                        <p>この場所の<br>キャンプの軽い特色とか</p>
+                        <a href="#" class="button">くわしく →</a>
+                    </div>
+                </div>
+
+                <div class="camp-section">
+                    <div class="camp-image">
+                        <img src="your-image-path4.jpg" alt="キャンプの写真">
+                    </div>
+                    <div class="camp-text">
+                        <h2>キャンプ4</h2>
+                        <p>この場所の<br>キャンプの軽い特色とか</p>
+                        <a href="#" class="button">くわしく →</a>
+                    </div>
+                </div>
+
+                <div class="camp-section">
+                    <div class="camp-image">
+                        <img src="your-image-path5.jpg" alt="キャンプの写真">
+                    </div>
+                    <div class="camp-text">
+                        <h2>キャンプ5</h2>
+                        <p>この場所の<br>キャンプの軽い特色とか</p>
+                        <a href="#" class="button">くわしく →</a>
+                    </div>
+                </div>
+
+                <div class="camp-section">
+                    <div class="camp-image">
+                        <img src="your-image-path6.jpg" alt="キャンプの写真">
+                    </div>
+                    <div class="camp-text">
+                        <h2>キャンプ6</h2>
+                        <p>この場所の<br>キャンプの軽い特色とか</p>
+                        <a href="#" class="button">くわしく →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section4">
+            <h2 class="section-title">竹のキャンプ村の魅力</h2>
+            <div class="image-container">
+                <div class="image-item">
+                    <img src="photo.webp" alt="画像1">
+                    <div class="image-text">
+                        <h3>竹にできること</h3>
+                        <p>竹の特徴<br>竹のいいところ<br>竹を深めるポイントのページ</p>
+                        <a href="#" class="button">くわしく →</a>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="photo.webp" alt="画像2">
+                    <div class="image-text">
+                        <h3>竹のもんだい</h3>
+                        <p>放置竹林の話<br>このキャンプ場が<br>それを解決しようとしてる話とか</p>
+                        <a href="#" class="button">くわしく →</a>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="photo.webp" alt="画像3">
+                    <div class="image-text">
+                        <h3>竹の工作</h3>
+                        <p>竹の工作<br>いっぱいいまとめるページ</p>
+                        <a href="#" class="button">くわしく →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const backgrounds = document.querySelectorAll('.background-image');
+        let currentIndex = 0;
+    
+        // 初期表示を設定
+        backgrounds[currentIndex].style.display = 'block';
+    
+        function changeBackground() {
+            backgrounds[currentIndex].style.display = 'none'; // 現在の画像を非表示
+            currentIndex = (currentIndex + 1) % backgrounds.length; // 次の画像のインデックスを取得
+            backgrounds[currentIndex].style.display = 'block'; // 次の画像を表示
+        }
+    
+        // 4秒ごとに画像を切り替え
+        setInterval(changeBackground, 4000); // 4秒ごとに画像を切り替え
+    </script>
+    
+</body>
+</html>

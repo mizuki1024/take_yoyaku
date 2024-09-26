@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: 'EB Garamond', serif;
+    background-color: #f4f4f4;
+    padding: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Flatpickr カスタマイズ用 */
+.flatpickr-calendar {
+    font-family: 'EB Garamond', serif;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-size: 20px; /* フォントサイズを大きく */
+    max-width: 100%;
+}
+
+.flatpickr-day {
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px; /* 日付フォントサイズを大きく */
+    padding: 12px; /* 日付の大きさを拡大 */
+}
+
+.flatpickr-day:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.flatpickr-day.selected {
+    background-color: #45a049;
+    color: white;
+}
+
+/* カレンダー全体を中央に表示するスタイル */
+.flatpickr-calendar.open {
+    width: 100%;
+    max-width: 600px; /* カレンダーの最大幅 */
+    margin: 0 auto;
+}
+
+/* カレンダーの月移動ボタンも大きく */
+.flatpickr-months .flatpickr-prev-month, 
+.flatpickr-months .flatpickr-next-month {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.flatpickr-monthDropdown-months {
+    font-size: 22px;
+}
+
+.flatpickr-weekdays {
+    font-size: 18px;
+}
+
+.flatpickr-weekday {
+    padding: 10px;
+}
+
