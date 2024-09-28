@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a img {
+    height: 80px;
+    margin-right: 5px;
+}
+
+.section1, .section2, .section3, .section4 {
+    text-align: center;
+    color: white;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.section1 {
+    height: 934px;
+    background-color: #6BC05D;
+}
+
+.top-image-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.top-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.section2 {
+    height: 900px;
+    position: relative;
+}
+
+.section2-inner-box {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* 画像の上にテキストを表示するために色を白に設定 */
+}
+
+.section3 {
+    background-color: #00a89d;
+    padding: 20px 7vw 0;
+}
+
+.title-section {
+    margin-bottom: 40px;
+}
+
+.title-section h1, .section-title h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.title-section p, .section-title p {
+    font-size: 18px;
+}
+
+.camp-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.camp-section {
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28%;
+    height: 350px;
+    margin-bottom: 40px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.camp-image {
+    width: 50%;
+    height: 100%;
+}
+
+.camp-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.camp-text {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.camp-text h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.camp-text p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.button {
+    background-color: #007f7b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #005f5a;
+}
+
+.section4 {
+    background-color: #c6eecb;
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #3b3b3b;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-item {
+    margin: 20px;
+    text-align: center;
+}
+
+.image-item img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.image-text {
+    background-color: #c6eecb;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    min-height: 200px;
+}
+
+.image-text h3 {
+    font-size: 24px;
+    color: #3b3b3b;
+    margin-bottom: 10px;
+}
+
+.image-text p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* style2.css のスタイル */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    height: 100px;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    margin-left: auto;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    font-size: 18px;
+    flex-direction: column;
+}
+
+nav ul li a img {
+    margin-bottom: 5px;
+}
+
+.section1 {
+    background-image: url('take_top.gif');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.section2 h2 {
+    font-size: 32px;
+}
+
+.section2 p {
+    font-size: 18px;
+}
+
+.camp-container {
+    justify-content: space-around;
+    width: 90%;
+    align-items: center;
+}
+
+.camp-section {
+    border-radius: 70% 50% 70% 60% / 40% 80% 60% 70%;
+    width: 30%;
+    margin-top: 50px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content-item {
+    background-color: white;
+    border-radius: 50% / 40%;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-image {
+    background-color: #f0f0f0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #3b3b3b;
+}
+
+.content-item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #3b3b3b;
+}
+
+.content-item p {
+    font-size: 14px;
+    color: #3b3b3b;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #3b7d3b;
+    font-size: 14px;
+}
+
+.button:hover {
+    background-color: #2a5e2a;
+}
+
+.back-image3-cover {
+    margin-top: -300px;
+    width: 100%;
+    height: 500px;
+    background-color: #6BC05D;
+}
+
+.back-image4-cover {
+    margin-top: -200px;
+    width: 100%;
+    height: 500px;
+    background-color: #00a89d;
+}
+
+.back-image {
+    width: 100%;
+    height: 100%;
+}
+
+.section2-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section4-img {
+    border-radius: 70% 50% 70% 60% / 40% 80% 60% 70%;
+}
