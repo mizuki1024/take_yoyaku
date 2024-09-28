@@ -49,6 +49,16 @@ nav {
     background-color: #6BC05D;
 }
 
+.section1-inner-box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* 画像の上にテキストを表示するために色を白に設定 */
+    z-index: 10;
+}
+
 .top-image-box {
     position: absolute;
     top: 0;
@@ -81,6 +91,7 @@ nav {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white; /* 画像の上にテキストを表示するために色を白に設定 */
+    z-index: 10;
 }
 
 .section3 {
